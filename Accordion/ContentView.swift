@@ -10,35 +10,18 @@ import SwiftUI
 import Combine
 
 struct ContentView: View {
-    @State private var persons: [Person] = []
+    @State private var company: Company = Company()
     @State private var haveFetched = false
 
     var body: some View {
         NavigationView {
-            VStack(spacing: 30.0) {
-                if persons.count == 0 {
-                    Text("Loading…")
-                        .font(.headline)
-                }
-
-                List(persons) { person in
-                    Button(action: {
-                        self.toggleSignIn(for: person)
-                    }) {
-                        HStack {
-                            Text(person.name.first)
-                            Text(person.name.last)
-                            Spacer()
-                            Image(systemName: person.hasSignedIn ? "person.fill" : "circle")
-                                .font(.title)
-                        }
-                    }
-                }
-
+            if company.departments.count == 0 {
+                LoadingView()
+            } else {
+                DepartmentList(company: $company)
             }
-            .navigationBarTitle("Staff")
-            .onAppear(perform: { self.fetchData() })
         }
+        .onAppear(perform: { self.fetchData() })
     }
 
     func fetchData() {
@@ -48,17 +31,7 @@ struct ContentView: View {
         haveFetched = true
 
         WebService().fetchSampleData { (persons) in
-            self.persons = persons
-        }
-    }
-
-    func toggleSignIn(for personToChange: Person) {
-        let index = persons.firstIndex() { person in
-            person.id == personToChange.id
-        }
-
-        if let personIndex = index {
-            persons[personIndex].hasSignedIn.toggle()
+            self.company = Company(with: persons)
         }
     }
 }
@@ -66,5 +39,54 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct DepartmentList: View {
+    @Binding var company: Company
+
+    var body: some View {
+        List {
+            ForEach(company.departments) { dept in
+                Section(header: Text(dept.name)) {
+                    ForEach(dept.persons) { person in
+                        Button(action: { self.toggleSignIn(for: person) }) {
+                            TableRowView(person: person)
+                        }
+                    }
+                }
+            }
+        }
+        .listStyle(GroupedListStyle())
+        .navigationBarTitle("Staff")
+    }
+
+    func toggleSignIn(for personToChange: Person) {
+        company.toggleSignIn(for: personToChange)
+    }
+}
+
+struct TableRowView: View {
+    var person: Person
+
+    var body: some View {
+        HStack {
+            Text(person.name.first)
+            Text(person.name.last)
+            Spacer()
+            if person.hasSignedIn {
+                Image(systemName: "person.fill")
+                    .font(.title)
+            }
+        }
+        .foregroundColor(.primary)
+    }
+}
+
+struct LoadingView: View {
+    var body: some View {
+        Text("Loading…")
+            .font(.largeTitle)
+            .navigationBarTitle("Staff")
     }
 }
