@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import Combine
 
 struct ContentView: View {
     @State private var company: Company = Company()
@@ -36,35 +35,49 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
 struct DepartmentList: View {
     @Binding var company: Company
+    @State private var activeDept: String = ""
 
     var body: some View {
         List {
             ForEach(company.departments) { dept in
-                Section(header: Text(dept.name)) {
+
+                Button(action: {
+                    self.activeDept = (dept.name == self.activeDept)
+                        ? ""
+                        : dept.name
+                }) {
+                    DepartmentTableRowView(departmentName: dept.name)
+                }
+                .listRowBackground(Color(UIColor.secondarySystemBackground))
+
+                if (dept.name == self.activeDept) {
                     ForEach(dept.persons) { person in
-                        Button(action: { self.toggleSignIn(for: person) }) {
+                        Button(action: {
+                            self.company.toggleSignIn(for: person)
+                        }) {
                             PersonTableRowView(person: person)
                         }
                     }
                 }
             }
         }
-        .listStyle(GroupedListStyle())
         .navigationBarTitle("Staff")
     }
 
-    func toggleSignIn(for personToChange: Person) {
-        company.toggleSignIn(for: personToChange)
+}
+
+struct DepartmentTableRowView: View {
+    var departmentName: String
+
+    var body: some View {
+        Text(departmentName)
+            .font(.headline)
+            .foregroundColor(Color(UIColor.secondaryLabel))
     }
 }
+
 
 struct PersonTableRowView: View {
     var person: Person
@@ -88,5 +101,13 @@ struct LoadingView: View {
         Text("Loading…")
             .font(.largeTitle)
             .navigationBarTitle("Staff")
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            // un-comment the next line to preview in dark mode
+            //  .environment(\.colorScheme, .dark)
     }
 }
