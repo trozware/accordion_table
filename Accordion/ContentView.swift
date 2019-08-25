@@ -51,7 +51,7 @@ struct DepartmentList: View {
                 Section(header: Text(dept.name)) {
                     ForEach(dept.persons) { person in
                         Button(action: { self.toggleSignIn(for: person) }) {
-                            TableRowView(person: person)
+                            PersonTableRowView(person: person)
                         }
                     }
                 }
@@ -66,7 +66,7 @@ struct DepartmentList: View {
     }
 }
 
-struct TableRowView: View {
+struct PersonTableRowView: View {
     var person: Person
 
     var body: some View {
