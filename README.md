@@ -4,7 +4,7 @@ In iOS projects, I have sometimes needed to use an Accordion-style table view wh
 
 This seemed like something that SwiftUI would do well, and it did.
 
-![Accordion](Accordion.gif)
+<img src="Accordion.gif" alt="Accordion in action in the canvas"  height="600">
 
 ## Files:
 
@@ -29,6 +29,8 @@ It has a separate subview for each possible row type:
 Both the row types are active becasue the content of each is enclosed in a Button.  
 The DepartmentTableRowView toggles the accordion display.  
 The PersonTableRowView toggles a `hasSignedIn` flag which will display a person icon if true.
+
+I have not added a single animation command to this, it is all just standard animations.
 
 ---
 
