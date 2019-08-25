@@ -3,14 +3,20 @@
 //  Accordion
 //
 //  Created by Sarah Reichelt on 24/08/2019.
-//  Copyright © 2019 TrozWare. All rights reserved.
 //
 
 import Foundation
 
+// I used next.json-generator.com to generate a fake set of data
+// The WebService downloads it and parses it into an array of Person objects
+// Company is initialized with this array and splits into into an array of Departments
+
 struct Company {
     var departments: [Department] = []
 
+    // There is probably an easier way to do this, but I am looping through the departments
+    // and finding the matching person in one of the departments.
+    // Since this is a fake data model, I am not too concerned about optimizatations
     mutating func toggleSignIn(for personToChange: Person) {
         for (deptIndex, dept) in departments.enumerated() {
             let index = dept.persons.firstIndex() { person in
@@ -26,6 +32,7 @@ struct Company {
 }
 
 extension Company {
+    // The custom init is in an extension so that the default init still works.
 
     init(with persons: [Person]) {
         let deptNames = Array(Set(persons.map { $0.department })).sorted()
@@ -40,8 +47,9 @@ extension Company {
 
         self.departments = departments
     }
-
 }
+
+// Department and Person are Identifiable so they can be looped through in the List
 
 struct Department: Identifiable {
     let id = UUID()
@@ -49,6 +57,7 @@ struct Department: Identifiable {
     var persons: [Person]
 }
 
+// These 2 structs mirror the structure of the JSON data
 struct Person: Decodable, Identifiable {
     let id: UUID
     let name: PersonName

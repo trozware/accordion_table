@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct WebService {
+// I used next.json-generator.com to generate a fake set of data
+// This WebService downloads it and parses it into an array of Person objects
 
+// It would ne neat to work out how to ue Combine to publish this data to a subscriber
+
+struct WebService {
     func fetchSampleData(callback: @escaping  ([Person]) -> Void) {
         let webAddress = "https://next.json-generator.com/api/json/get/Nk-d9dtVw"
         guard let url = URL(string: webAddress) else {
@@ -17,14 +21,7 @@ struct WebService {
         }
 
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print(error)
-                callback([])
-                return
-            }
-
             guard let data = data else {
-                print("No data, or not decoded")
                 callback([])
                 return
             }
@@ -38,10 +35,5 @@ struct WebService {
             }
         }
         task.resume()
-//            .map { (data, response) in data }
-//            .decode(type: Array<Person>.self, decoder: JSONDecoder())
-//            .receive(on: RunLoop.main)
-//            .eraseToAnyPublisher()
     }
-    
 }
