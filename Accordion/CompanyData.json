@@ -1,0 +1,502 @@
+{
+  "departments" : [
+    {
+      "id" : "5B1CBD33-DAAC-4E3D-9A21-66F7CADF9CFC",
+      "name" : "Catering",
+      "persons" : [
+        {
+          "id" : "E223052C-EFA6-40BA-A71B-CFEDCF358F9F",
+          "name" : {
+            "first" : "Essie",
+            "last" : "Cooke"
+          },
+          "department" : "Catering",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "67F4E5FA-BD14-4789-B6F8-589ADAD0D380",
+          "name" : {
+            "first" : "Gilmore",
+            "last" : "Lambert"
+          },
+          "department" : "Catering",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "A7BDF9A5-54E1-44AD-9434-98CF3B4C9BB7",
+          "name" : {
+            "first" : "Hurley",
+            "last" : "Larson"
+          },
+          "department" : "Catering",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "CF4F1AFD-956C-471E-A813-D9DBB17E4172",
+          "name" : {
+            "first" : "Maribel",
+            "last" : "Mcfadden"
+          },
+          "department" : "Catering",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "333DE49F-85C4-46D0-B34E-CA6518F08AD4",
+          "name" : {
+            "first" : "Lucile",
+            "last" : "Phillips"
+          },
+          "department" : "Catering",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "AD5F229B-BA46-4620-9C1A-49DE75C126D1",
+          "name" : {
+            "first" : "Jarvis",
+            "last" : "Velez"
+          },
+          "department" : "Catering",
+          "hasSignedIn" : false
+        }
+      ]
+    },
+    {
+      "id" : "48C1419B-BA0D-4A18-8E41-508A87E5E01A",
+      "name" : "Customer Support",
+      "persons" : [
+        {
+          "id" : "3E1DBE42-E295-4ACD-AC19-E8E50BB6014A",
+          "name" : {
+            "first" : "Huff",
+            "last" : "Allison"
+          },
+          "department" : "Customer Support",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "B4F9A519-6A46-45E0-BB0D-7862BB9F3314",
+          "name" : {
+            "first" : "Byers",
+            "last" : "Peterson"
+          },
+          "department" : "Customer Support",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "8C1CE070-F8FF-49F2-8C55-9D857C1B5E9B",
+          "name" : {
+            "first" : "Wynn",
+            "last" : "Valentine"
+          },
+          "department" : "Customer Support",
+          "hasSignedIn" : false
+        }
+      ]
+    },
+    {
+      "id" : "B63C9CF2-FB95-402C-96B8-18F8E6030522",
+      "name" : "IT",
+      "persons" : [
+        {
+          "id" : "D6FCF42D-880E-47D2-B633-8B1EB84CD150",
+          "name" : {
+            "first" : "Mooney",
+            "last" : "Benson"
+          },
+          "department" : "IT",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "993EF765-8077-4C89-891B-3B48584B6932",
+          "name" : {
+            "first" : "Lillie",
+            "last" : "Buck"
+          },
+          "department" : "IT",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "DBF0D88C-B6AF-40A2-A1EC-6EBE5D205FD4",
+          "name" : {
+            "first" : "Casandra",
+            "last" : "Emerson"
+          },
+          "department" : "IT",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "267AE9C5-FA58-491A-8B31-DA7BA104FADB",
+          "name" : {
+            "first" : "Juanita",
+            "last" : "Herring"
+          },
+          "department" : "IT",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "404A6469-F406-43CD-B42B-773A85EF1E03",
+          "name" : {
+            "first" : "Julie",
+            "last" : "Lang"
+          },
+          "department" : "IT",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "E34F9B91-FCD2-4F41-88D8-6395180ACB98",
+          "name" : {
+            "first" : "Phoebe",
+            "last" : "Wise"
+          },
+          "department" : "IT",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "8F37E4C2-F70C-4E0B-BD77-14E0403370D2",
+          "name" : {
+            "first" : "Courtney",
+            "last" : "Wynn"
+          },
+          "department" : "IT",
+          "hasSignedIn" : false
+        }
+      ]
+    },
+    {
+      "id" : "45A301D2-D54D-4B47-BD7C-E61B76A88C85",
+      "name" : "Maintenance",
+      "persons" : [
+        {
+          "id" : "0D1FB668-59AF-483D-A97B-EA0EA8212AFC",
+          "name" : {
+            "first" : "Cross",
+            "last" : "Blankenship"
+          },
+          "department" : "Maintenance",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "6DBB5583-D6E2-4D25-B56F-FADAE26B719B",
+          "name" : {
+            "first" : "Jacqueline",
+            "last" : "Dawson"
+          },
+          "department" : "Maintenance",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "CA09CDCB-60EB-4FA7-9553-6EE9CB883F87",
+          "name" : {
+            "first" : "Beard",
+            "last" : "Garner"
+          },
+          "department" : "Maintenance",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "935192AC-36EA-4657-9494-687B482C4E6F",
+          "name" : {
+            "first" : "Burns",
+            "last" : "Henderson"
+          },
+          "department" : "Maintenance",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "2063DAB7-9346-42D9-95DA-82DA0FA8D31F",
+          "name" : {
+            "first" : "Walters",
+            "last" : "Le"
+          },
+          "department" : "Maintenance",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "D3F2E1F9-44F2-40E2-B826-6E8DA28E47C9",
+          "name" : {
+            "first" : "Cobb",
+            "last" : "Morin"
+          },
+          "department" : "Maintenance",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "0D714940-DA2E-403C-9962-B2E0E1126027",
+          "name" : {
+            "first" : "Sullivan",
+            "last" : "Rivas"
+          },
+          "department" : "Maintenance",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "32B2F8A6-1FF6-41DA-9153-F9C5B100064D",
+          "name" : {
+            "first" : "Mcgee",
+            "last" : "Tyson"
+          },
+          "department" : "Maintenance",
+          "hasSignedIn" : false
+        }
+      ]
+    },
+    {
+      "id" : "C57185B0-8802-4C5D-853D-D9EACD4C6C08",
+      "name" : "Management",
+      "persons" : [
+        {
+          "id" : "5506961A-B46F-49AE-BAB8-BF33F3A9EB1B",
+          "name" : {
+            "first" : "Ballard",
+            "last" : "Beach"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "1D6EEACD-97B8-4571-A59F-EBA41FB71D5C",
+          "name" : {
+            "first" : "Garcia",
+            "last" : "Boyd"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "EC96A839-E0E9-4EFB-B757-145E612243E2",
+          "name" : {
+            "first" : "Hooper",
+            "last" : "Burch"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "6707553A-D027-4483-9BCB-4AA1934A87AF",
+          "name" : {
+            "first" : "Vaughan",
+            "last" : "Fitzgerald"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "C8179C59-D3ED-4FE4-B791-C88EFCC8DA80",
+          "name" : {
+            "first" : "Louella",
+            "last" : "Franco"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "87C2C777-8C9B-47D8-A3AD-71F10EC824B7",
+          "name" : {
+            "first" : "Angeline",
+            "last" : "Kelley"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "C516DF57-3D9D-4AB2-843B-5F76BA56D902",
+          "name" : {
+            "first" : "John",
+            "last" : "Mcbride"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "95653CFB-7BC0-4282-94A4-43EC79480818",
+          "name" : {
+            "first" : "Lina",
+            "last" : "Mcdowell"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "BDC74543-14BA-4A68-B0F3-8F0DAB03657A",
+          "name" : {
+            "first" : "Burnett",
+            "last" : "Montoya"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "0A3DD166-C4FF-4B8F-9FA1-5BA6238835BD",
+          "name" : {
+            "first" : "Compton",
+            "last" : "Serrano"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "E2FAE2E1-F5F5-4748-8F73-98F0B24E420D",
+          "name" : {
+            "first" : "Carroll",
+            "last" : "Vang"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "E81388E0-8946-4F51-B8D6-E72FF9B5A258",
+          "name" : {
+            "first" : "Mae",
+            "last" : "Velazquez"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "66220F5B-6DB4-4F46-9D24-6CF48451F705",
+          "name" : {
+            "first" : "Stanley",
+            "last" : "Williams"
+          },
+          "department" : "Management",
+          "hasSignedIn" : false
+        }
+      ]
+    },
+    {
+      "id" : "9E8B769A-4402-45A5-A48A-517E80837FA3",
+      "name" : "Manufacturing",
+      "persons" : [
+        {
+          "id" : "A7550391-04C4-48FC-A835-8BDCD51BE214",
+          "name" : {
+            "first" : "Blair",
+            "last" : "England"
+          },
+          "department" : "Manufacturing",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "07D3F0CD-922A-431E-9A4E-CD92414AF177",
+          "name" : {
+            "first" : "Velasquez",
+            "last" : "Gentry"
+          },
+          "department" : "Manufacturing",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "4B3B6739-EC50-420E-9817-59AC6EC8A7E0",
+          "name" : {
+            "first" : "Alberta",
+            "last" : "Medina"
+          },
+          "department" : "Manufacturing",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "ADECED0E-8C43-41A7-BB1D-03FB7A5F835B",
+          "name" : {
+            "first" : "Kelley",
+            "last" : "Meyer"
+          },
+          "department" : "Manufacturing",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "DD4CAC4F-B36A-42B8-B3E4-34576C4FF124",
+          "name" : {
+            "first" : "Hansen",
+            "last" : "Mosley"
+          },
+          "department" : "Manufacturing",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "9918FD90-345F-4913-BF95-3CB3DDA68D7D",
+          "name" : {
+            "first" : "Beverly",
+            "last" : "Petty"
+          },
+          "department" : "Manufacturing",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "54BC0EDA-BB1C-4343-9515-085327E529A0",
+          "name" : {
+            "first" : "Araceli",
+            "last" : "Simpson"
+          },
+          "department" : "Manufacturing",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "DC31A478-14AF-4A4B-A336-DD3CD8AB0563",
+          "name" : {
+            "first" : "Lopez",
+            "last" : "Sullivan"
+          },
+          "department" : "Manufacturing",
+          "hasSignedIn" : false
+        }
+      ]
+    },
+    {
+      "id" : "C2FA4BC9-0F95-4646-AFDE-EADFDB23C27B",
+      "name" : "Marketing",
+      "persons" : [
+        {
+          "id" : "3CFC39FC-610A-483E-8063-00DE80C8DE1B",
+          "name" : {
+            "first" : "Mcneil",
+            "last" : "Alvarado"
+          },
+          "department" : "Marketing",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "49A0792C-E450-43AC-82D3-A205CDEC7DE9",
+          "name" : {
+            "first" : "Hill",
+            "last" : "Davidson"
+          },
+          "department" : "Marketing",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "F6E911F6-42A4-49DE-B5C8-4909A218D18C",
+          "name" : {
+            "first" : "Gilbert",
+            "last" : "Good"
+          },
+          "department" : "Marketing",
+          "hasSignedIn" : false
+        }
+      ]
+    },
+    {
+      "id" : "D3F38BD4-49C6-4BB5-B6C7-A97CDF77AE43",
+      "name" : "Sales",
+      "persons" : [
+        {
+          "id" : "CD0E841F-5166-4A39-B359-7100F1DEA06D",
+          "name" : {
+            "first" : "Sutton",
+            "last" : "Huber"
+          },
+          "department" : "Sales",
+          "hasSignedIn" : false
+        },
+        {
+          "id" : "C08CD3E5-821D-47AC-BCAB-E8979DA46AB2",
+          "name" : {
+            "first" : "Lorene",
+            "last" : "Richard"
+          },
+          "department" : "Sales",
+          "hasSignedIn" : false
+        }
+      ]
+    }
+  ]
+}

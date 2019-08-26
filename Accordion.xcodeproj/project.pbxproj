@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		262402B52310FA6A00112180 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8D0FD2310C63C00151B60 /* Company.swift */; };
+		265C880423139B2F00491272 /* CompanyData.json in Resources */ = {isa = PBXBuildFile; fileRef = 265C880323139B2F00491272 /* CompanyData.json */; };
 		26E8D0E82310C62300151B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8D0E72310C62300151B60 /* AppDelegate.swift */; };
 		26E8D0EA2310C62300151B60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8D0E92310C62300151B60 /* SceneDelegate.swift */; };
 		26E8D0EC2310C62300151B60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8D0EB2310C62300151B60 /* ContentView.swift */; };
 		26E8D0EE2310C62500151B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E8D0ED2310C62500151B60 /* Assets.xcassets */; };
 		26E8D0F12310C62500151B60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26E8D0F02310C62500151B60 /* Preview Assets.xcassets */; };
 		26E8D0F42310C62500151B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26E8D0F22310C62500151B60 /* LaunchScreen.storyboard */; };
-		26E8D0FC2310C63500151B60 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E8D0FB2310C63500151B60 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		265C880323139B2F00491272 /* CompanyData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CompanyData.json; sourceTree = "<group>"; };
 		26E8D0E42310C62300151B60 /* Accordion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accordion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26E8D0E72310C62300151B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26E8D0E92310C62300151B60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,7 +27,6 @@
 		26E8D0F02310C62500151B60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26E8D0F32310C62500151B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		26E8D0F52310C62500151B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26E8D0FB2310C63500151B60 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		26E8D0FD2310C63C00151B60 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +64,7 @@
 				26E8D0E92310C62300151B60 /* SceneDelegate.swift */,
 				26E8D0EB2310C62300151B60 /* ContentView.swift */,
 				26E8D0FD2310C63C00151B60 /* Company.swift */,
-				26E8D0FB2310C63500151B60 /* WebService.swift */,
+				265C880323139B2F00491272 /* CompanyData.json */,
 				26E8D0ED2310C62500151B60 /* Assets.xcassets */,
 				26E8D0F22310C62500151B60 /* LaunchScreen.storyboard */,
 				26E8D0F52310C62500151B60 /* Info.plist */,
@@ -140,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26E8D0F42310C62500151B60 /* LaunchScreen.storyboard in Resources */,
+				265C880423139B2F00491272 /* CompanyData.json in Resources */,
 				26E8D0F12310C62500151B60 /* Preview Assets.xcassets in Resources */,
 				26E8D0EE2310C62500151B60 /* Assets.xcassets in Resources */,
 			);
@@ -154,7 +155,6 @@
 			files = (
 				26E8D0E82310C62300151B60 /* AppDelegate.swift in Sources */,
 				26E8D0EA2310C62300151B60 /* SceneDelegate.swift in Sources */,
-				26E8D0FC2310C63500151B60 /* WebService.swift in Sources */,
 				262402B52310FA6A00112180 /* Company.swift in Sources */,
 				26E8D0EC2310C62300151B60 /* ContentView.swift in Sources */,
 			);

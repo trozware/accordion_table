@@ -7,11 +7,10 @@
 
 import Foundation
 
-// I used next.json-generator.com to generate a fake set of data
-// The WebService downloads it and parses it into an array of Person objects
-// Company is initialized with this array and splits into into an array of Departments
+// I used next.json-generator.com to generate a fake set of data and saved it in the bundle for testing.
+// The structs mirror the structure of the JSON data.
 
-struct Company {
+struct Company: Codable {
     var departments: [Department] = []
 
     // There is probably an easier way to do this, but I am looping through the departments
@@ -32,40 +31,39 @@ struct Company {
 }
 
 extension Company {
-    // The custom init is in an extension so that the default init still works.
-
-    init(with persons: [Person]) {
-        let deptNames = Array(Set(persons.map { $0.department })).sorted()
-        let departments = deptNames.map { deptName -> Department in
-            let deptPersons = persons
-                .filter { $0.department == deptName }
-                .sorted { a, b in
-                    return (a.name.last + a.name.first) < (b.name.last + b.name.first)
-            }
-            return Department(name: deptName, persons: deptPersons)
+    // Read in the sample data for testing the display
+    static func demoCompany() -> Company {
+        guard let jsonUrl = Bundle.main.url(forResource: "CompanyData", withExtension: "json") else {
+            fatalError("Missing CompanyData.json file.")
         }
 
-        self.departments = departments
+        do {
+            let data = try Data(contentsOf: jsonUrl)
+            let company = try JSONDecoder().decode(Company.self, from: data)
+            return company
+        } catch {
+            print(error)
+            fatalError("Unable to load CompanyData.json file.")
+        }
     }
 }
 
 // Department and Person are Identifiable so they can be looped through in the List
 
-struct Department: Identifiable {
+struct Department: Codable, Identifiable {
     let id = UUID()
     let name: String
     var persons: [Person]
 }
 
-// These 2 structs mirror the structure of the JSON data
-struct Person: Decodable, Identifiable {
+struct Person: Codable, Identifiable {
     let id: UUID
     let name: PersonName
     let department: String
     var hasSignedIn: Bool
 }
 
-struct PersonName: Decodable {
+struct PersonName: Codable {
     let first: String
     let last: String
 }

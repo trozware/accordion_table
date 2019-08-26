@@ -8,41 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var company: Company = Company()
-    @State private var haveFetchedData = false
-
-    // Display one of 2 views depending on whwther the web data has been fetched
-    // Use onAppear to fetch the data the first time this view appears
+    @State var company: Company = Company.demoCompany()
 
     var body: some View {
         NavigationView {
-            if haveFetchedData {
-                DepartmentList(company: $company)
-            } else {
-                LoadingView()
-            }
+            DepartmentList(company: $company)
+                .navigationBarTitle("Staff")
         }
-        .onAppear(perform: { self.fetchData() })
-    }
-}
-
-extension ContentView {
-    // Use the WebService to fetch and process the data
-    // Setting the @State variables will refresh the view automatically
-    func fetchData() {
-        WebService().fetchSampleData { (persons) in
-            self.company = Company(with: persons)
-            self.haveFetchedData = true
-        }
-    }
-}
-
-struct LoadingView: View {
-    // Placeholder view for display before there is any data
-    var body: some View {
-        Text("Loading…")
-            .font(.largeTitle)
-            .navigationBarTitle("Staff")
     }
 }
 
@@ -59,34 +31,39 @@ struct DepartmentList: View {
             ForEach(company.departments) { dept in
 
                 // enclosing the contents of a List Row in a Button means you can
-                // set up a different action for different rows
+                // set up and action for it, with different actions for different rows
 
-                Button(action: {
-                    self.activeDept = (dept.name == self.activeDept)
-                        ? ""
-                        : dept.name
-                }) {
-                    DepartmentTableRowView(departmentName: dept.name)
+                Button(action: { self.headerTapAction(for: dept.name) }) {
+                    HeaderRowView(departmentName: dept.name)
                 }
                 .listRowBackground(Color(UIColor.secondarySystemBackground))
 
-                // if showing the people in a department, use a different button action
                 if (dept.name == self.activeDept) {
                     ForEach(dept.persons) { person in
-                        Button(action: {
-                            self.company.toggleSignIn(for: person)
-                        }) {
-                            PersonTableRowView(person: person)
+                        Button(action: { self.rowTapAction(for: person) }) {
+                            DataRowView(person: person)
                         }
                     }
                 }
             }
         }
-        .navigationBarTitle("Staff")
+    }
+
+    func headerTapAction(for deptName: String) {
+        if deptName == self.activeDept {
+            // this header was already active so close all
+            activeDept = ""
+        } else {
+            activeDept = deptName
+        }
+    }
+
+    func rowTapAction(for person: Person) {
+        self.company.toggleSignIn(for: person)
     }
 }
 
-struct DepartmentTableRowView: View {
+struct HeaderRowView: View {
     // custom view for the department name header rows
     var departmentName: String
 
@@ -97,8 +74,7 @@ struct DepartmentTableRowView: View {
     }
 }
 
-
-struct PersonTableRowView: View {
+struct DataRowView: View {
     // custom view for the person rows
     var person: Person
 
