@@ -36,4 +36,7 @@ I have not added a single animation command to this, it is all just standard ani
 
 ## Change Log:
 
-- 25th August 2019: initial release
+- 28th August 2019: 
+  - Removed web service for data, replaced with local data file for faster testing.
+  - Renamed subviews and separated out their tap actions for more general use.
+- 25th August 2019: i\Initial release.
